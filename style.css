@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Inpin-Hongmengti";
+    src: url(Inpin\ Hongmengti.ttf);
+}
+
+/* use this to omit lines of code */
+
+body {
+    padding: 5% 5%;
+    text-align: center;
+    background-image: url(./background/zzz_background_pattern_01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: "Inpin-Hongmengti";
+    color: white;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-grid {
+    position: relative;
+    width: 270px;
+    height: 600px;
+    margin: 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    border-radius: 22px;
+}
+
+.card {
+    position: relative;
+    width: 270px;
+    height: 430px;
+    display: grid;
+/*  grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto; */
+    border-radius: 22px;
+    z-index: 3;
+}
+
+.card-image {
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: url(./images/??.webp); */
+    background-size: cover;
+    
+}
+
+.card-image img {
+    max-width: 97%;
+    max-height: 97%;
+    border-radius: 20px;
+    transition: max-width 0.4s, max-height 0.4s;
+}
+
+.card:hover .card-image img {
+    max-width: 120%;
+    max-height: 120%;
+}
+
+
+.card {
+    box-shadow: 0 15px 30px -10px #000;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+.card-body {
+    font-family: "Inpin-Hongmengti";
+    color: white;
+    margin: 20px;
+    font-size: 16px;
+    transition: font-size 0.4s;
+    z-index: 1;
+}
+
+.card-footer {
+    font-family: "Inpin-Hongmengti";
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    transition: font-size 0.4s;
+    z-index: 4;
+}
+
+.card-grid:hover .card-footer {
+    font-size: 30px;
+}
